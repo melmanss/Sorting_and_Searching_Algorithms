@@ -53,22 +53,4 @@ public class ArrayUtils {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        // Створення масиву та заповнення його випадковими числами
-        Random random = new Random();
-        int[] array = random.ints(10, 0, 100).toArray();
-        System.out.println("Початковий масив: " + Arrays.toString(array));
-
-        mergeSort(array);
-        System.out.println("Відсортований масив: " + Arrays.toString(array));
-
-        int target = array[random.nextInt(array.length)];
-        int result = binarySearch(array, target);
-        if (result != -1) {
-            System.out.println("Значення " + target + " знайдено на індексі: " + result);
-        } else {
-            System.out.println("Значення " + target + " не знайдено.");
-        }
-    }
 }
